@@ -1,0 +1,30 @@
+# 机器人轨迹模拟参数配置文件
+
+# 模拟频率 (Hz)
+sim_freq: 20.0
+
+# 轨迹类型选项: circle, figure8, sine, line
+trajectory_type: "circle"
+
+# 最大速度 (m/s)
+max_velocity: 0.5
+
+# 轨迹半径 (m)
+radius: 2.0
+
+# 其他轨迹专用参数
+circle:
+  velocity: 0.5
+
+figure8:
+  velocity: 0.5
+  scale: 1.0
+
+sine:
+  velocity: 0.5
+  amplitude: 1.0
+  frequency: 0.5
+
+line:
+  velocity: 0.5
+  distance: 10.0

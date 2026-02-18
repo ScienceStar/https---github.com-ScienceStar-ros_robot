@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- 轨迹模拟节点 -->
+  <node name="trajectory_simulator" pkg="robot_trajectory_sim" type="trajectory_simulator_node.py" output="screen">
+    <!-- 模拟频率(Hz) -->
+    <param name="sim_freq" value="20.0" />
+    
+    <!-- 轨迹类型: circle, figure8, sine, line -->
+    <param name="trajectory_type" value="circle" />
+    
+    <!-- 最大速度(m/s) -->
+    <param name="max_velocity" value="0.5" />
+    
+    <!-- 轨迹半径(m) -->
+    <param name="radius" value="2.0" />
+  </node>
+
+  <!-- RViz 可视化 -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_trajectory_sim)/config/trajectory.rviz" />
+
+</launch>
