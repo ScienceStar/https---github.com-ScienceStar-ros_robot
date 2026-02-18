@@ -120,8 +120,6 @@ class TrajectorySimulator:
         omega = 0.0
         
         return x, y, robot_theta, vx, vy, omega
-
-        
     
     def get_line_trajectory(self, t):
         """直线轨迹"""
